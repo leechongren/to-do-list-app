@@ -11,13 +11,10 @@ function createToDoListItem(){
     //create an <li> element
     const li = document.createElement("li")
     //add text to li element
-    li.textContent = input.value
+    li.textContent = input.value  //need .value to parse it into a string
     //find the ul element and 
     const ul = document.querySelector("ul")
     //append li element to ul element
     ul.appendChild(li)
 }
 
-
-//appends it to list
- //need .value to parse it into a string
