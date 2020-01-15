@@ -5,9 +5,14 @@ const addButton = document.querySelector("button")
 addButton.addEventListener("click",createToDoListItem)
 
 
+
 function createToDoListItem(){
     
     const input = document.querySelector("input[type=text]")
+    //check if input is empty
+    if (!input.value){
+        return;
+    }
     //create an <li> element
     const li = document.createElement("li")
     //add text to li element
@@ -16,5 +21,8 @@ function createToDoListItem(){
     const ul = document.querySelector("ul")
     //append li element to ul element
     ul.appendChild(li)
+
+    //resets the value to blank string
+    input.value = ""
 }
 
